@@ -1,0 +1,33 @@
+{
+  "brand": "NEXUS",
+  "ctaLabel": "Contáctanos",
+  "nav": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Nosotros", "href": "/nosotros" },
+    { "label": "Servicios", "href": "/#servicios" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "contact": {
+    "phone": "+34 639 494 000",
+    "email": "hola@nexusdigital.io",
+    "location": "Madrid, España"
+  },
+  "footerTagline": "Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.",
+  "footerPages": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Nosotros", "href": "/nosotros" },
+    { "label": "Servicios", "href": "/#servicios" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "footerLinks": [
+    { "label": "Blog", "href": "#" },
+    { "label": "FAQ", "href": "#" },
+    { "label": "Privacidad", "href": "#" },
+    { "label": "Términos", "href": "#" }
+  ],
+  "footerBottomLinks": [
+    { "label": "Términos", "href": "#" },
+    { "label": "Soporte", "href": "#" }
+  ],
+  "copyright": "© 2026 NEXUS Digital | Todos los derechos reservados."
+}

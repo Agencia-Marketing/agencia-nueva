@@ -1,6 +1,9 @@
 ---
 import '../styles/global.css';
 import { colors, fonts, logo } from '../config/theme.mjs';
+import site from '../content/settings/site.json';
+const { brand, ctaLabel, nav, contact, footerTagline, footerPages, footerLinks, footerBottomLinks, copyright } = site;
+const contactIcons: Record<string, string> = { phone: 'call', email: 'mail', location: 'location_on' };
 interface Props {
   title: string;
   description?: string;
@@ -68,16 +71,15 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8">
-          <a href="/" class="text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest">Inicio</a>
-          <a href="/nosotros" class="text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest">Nosotros</a>
-          <a href="/#servicios" class="text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest">Servicios</a>
-          <a href="/contacto" class="text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest">Contacto</a>
+          {nav.map(item => (
+            <a href={item.href} class="text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest">{item.label}</a>
+          ))}
         </nav>
 
         <!-- CTA + Mobile toggle -->
         <div class="flex items-center gap-4">
           <a href="/contacto" class="hidden md:inline-flex btn-cyber press">
-            <span class="icon-wrap">Contáctanos <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+            <span class="icon-wrap">{ctaLabel} <span class="material-symbols-outlined text-base">arrow_forward</span></span>
           </a>
           <button id="menu-btn" class="md:hidden glass p-2 rounded-lg" aria-label="Menú">
             <span class="material-symbols-outlined text-text-primary">menu</span>
@@ -89,12 +91,11 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden glass mx-4 mb-4 rounded-2xl overflow-hidden">
       <nav class="flex flex-col p-4 gap-1">
-        <a href="/" class="px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest">Inicio</a>
-        <a href="/nosotros" class="px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest">Nosotros</a>
-        <a href="/#servicios" class="px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest">Servicios</a>
-        <a href="/contacto" class="px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest">Contacto</a>
+        {nav.map(item => (
+          <a href={item.href} class="px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest">{item.label}</a>
+        ))}
         <div class="pt-2 mt-1 border-t border-[rgba(255,255,255,0.07)]">
-          <a href="/contacto" class="btn-cyber-solid w-full justify-center text-center block">Contáctanos</a>
+          <a href="/contacto" class="btn-cyber-solid w-full justify-center text-center block">{ctaLabel}</a>
         </div>
       </nav>
     </div>
@@ -117,9 +118,9 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
                   <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span>
                 </span>
             }
-            <span class="font-display font-bold text-lg text-text-primary">NEXUS</span>
+            <span class="font-display font-bold text-lg text-text-primary">{brand}</span>
           </a>
-          <p class="text-text-secondary text-sm leading-relaxed mb-5">Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.</p>
+          <p class="text-text-secondary text-sm leading-relaxed mb-5">{footerTagline}</p>
           <div class="flex gap-3">
             <a href="#" class="glass p-2 rounded-lg hover:border-accent/40 transition-all" aria-label="Redes sociales">
               <span class="material-symbols-outlined text-text-secondary text-base">share</span>
@@ -134,18 +135,12 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
         <div>
           <p class="tag-cyber mb-5">Contacto</p>
           <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-text-secondary text-sm">
-              <span class="material-symbols-outlined text-accent text-base">call</span>
-              +34 639 494 000
-            </li>
-            <li class="flex items-center gap-3 text-text-secondary text-sm">
-              <span class="material-symbols-outlined text-accent text-base">mail</span>
-              hola@nexusdigital.io
-            </li>
-            <li class="flex items-center gap-3 text-text-secondary text-sm">
-              <span class="material-symbols-outlined text-accent text-base">location_on</span>
-              Madrid, España
-            </li>
+            {Object.entries(contact).map(([key, value]) => (
+              <li class="flex items-center gap-3 text-text-secondary text-sm">
+                <span class="material-symbols-outlined text-accent text-base">{contactIcons[key] ?? 'circle'}</span>
+                {value}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -153,10 +148,9 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
         <div>
           <p class="tag-cyber mb-5">Páginas</p>
           <ul class="space-y-2">
-            <li><a href="/" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Inicio</a></li>
-            <li><a href="/nosotros" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Nosotros</a></li>
-            <li><a href="/#servicios" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Servicios</a></li>
-            <li><a href="/contacto" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Contacto</a></li>
+            {footerPages.map(item => (
+              <li><a href={item.href} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">{item.label}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -164,20 +158,20 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
         <div>
           <p class="tag-cyber mb-5">Enlaces</p>
           <ul class="space-y-2">
-            <li><a href="#" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Blog</a></li>
-            <li><a href="#" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">FAQ</a></li>
-            <li><a href="#" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Privacidad</a></li>
-            <li><a href="#" class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">Términos</a></li>
+            {footerLinks.map(item => (
+              <li><a href={item.href} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">{item.label}</a></li>
+            ))}
           </ul>
         </div>
       </div>
 
       <div class="cyber-divider mb-8"></div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-text-dim text-sm">© 2026 NEXUS Digital | Todos los derechos reservados.</p>
+        <p class="text-text-dim text-sm">{copyright}</p>
         <div class="flex gap-6">
-          <a href="#" class="text-text-dim text-sm hover:text-text-secondary transition-colors">Términos</a>
-          <a href="#" class="text-text-dim text-sm hover:text-text-secondary transition-colors">Soporte</a>
+          {footerBottomLinks.map(item => (
+            <a href={item.href} class="text-text-dim text-sm hover:text-text-secondary transition-colors">{item.label}</a>
+          ))}
         </div>
       </div>
     </div>

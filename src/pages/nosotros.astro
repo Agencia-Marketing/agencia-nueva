@@ -1,21 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import about from '../content/pages/about.json';
+import { highlightHeading } from '../lib/highlight';
 
-const stats = [
-  { value: '500+', label: 'Proyectos completados' },
-  { value: '98%',  label: 'Tasa de retención' },
-  { value: '24/7', label: 'Soporte activo' },
-  { value: '15',   label: 'Países atendidos' },
-];
-
-const team = [
-  { name: 'Alex Rivera',   role: 'Director Creativo',  img: 'https://i.pravatar.cc/300?img=1' },
-  { name: 'Elena Gómez',  role: 'Estratega SEO',       img: 'https://i.pravatar.cc/300?img=5' },
-  { name: 'Marc Costa',   role: 'Lead Developer',      img: 'https://i.pravatar.cc/300?img=8' },
-  { name: 'Sofía Méndez', role: 'Growth Manager',      img: 'https://i.pravatar.cc/300?img=11' },
-];
+export const prerender = true;
 ---
-<Layout title="Nosotros | NEXUS Digital">
+<Layout title={about.title}>
 
   <!-- HERO -->
   <section class="mesh-bg relative pt-32 pb-section-py-sm overflow-hidden">
@@ -23,23 +13,21 @@ const team = [
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
-          <span class="tag-cyber mb-5 inline-flex"><span class="material-symbols-outlined text-sm">groups</span>Sobre NEXUS</span>
-          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5">
-            El equipo detrás de las marcas que <span class="gradient-text">dominan</span> su industria
-          </h1>
+          <span class="tag-cyber mb-5 inline-flex"><span class="material-symbols-outlined text-sm">groups</span>{about.heroTag}</span>
+          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(about.heroHeading, about.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary mb-8">
-            Somos más que una agencia: somos el socio tecnológico que tu empresa necesita para escalar sin límites en el entorno digital.
+            {about.heroParagraph}
           </p>
           <div class="flex gap-4 flex-wrap">
-            <a href="#historia" class="btn-cyber-solid magnetic press">Nuestra Historia</a>
-            <a href="/#servicios" class="btn-ghost magnetic press">Ver Servicios</a>
+            <a href={about.heroCtaPrimary.href} class="btn-cyber-solid magnetic press">{about.heroCtaPrimary.label}</a>
+            <a href={about.heroCtaSecondary.href} class="btn-ghost magnetic press">{about.heroCtaSecondary.label}</a>
           </div>
         </div>
         <div class="reveal">
           <div class="glass card-cyber rounded-2xl overflow-hidden animate-float">
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-              alt="Equipo NEXUS Digital"
+              src={about.heroImage}
+              alt={about.heroImageAlt}
               class="w-full aspect-[4/3] object-cover opacity-85"
               loading="eager"
             />
@@ -58,31 +46,26 @@ const team = [
           <div class="relative">
             <div class="glass card-cyber rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=80"
-                alt="Liderazgo NEXUS Digital"
+                src={about.aboutImage}
+                alt={about.aboutImageAlt}
                 class="w-full aspect-square object-cover opacity-80"
               />
             </div>
             <div class="absolute -bottom-4 -right-4 glass rounded-xl px-5 py-3 border border-accent/30">
-              <p class="text-accent font-display font-bold text-sm">10+ Años</p>
-              <p class="text-text-secondary text-xs">impulsando marcas digitales</p>
+              <p class="text-accent font-display font-bold text-sm">{about.aboutBadgeValue}</p>
+              <p class="text-text-secondary text-xs">{about.aboutBadgeLabel}</p>
             </div>
           </div>
         </div>
         <!-- Content col -->
         <div class="md:col-span-7 reveal">
-          <span class="tag-cyber mb-5 inline-flex">Nuestra Esencia</span>
-          <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5">
-            El motor que impulsa tu <span class="gradient-text">crecimiento digital</span>
-          </h2>
-          <p class="text-body-md text-text-secondary mb-6 leading-relaxed">
-            En NEXUS no fabricamos soluciones genéricas. Cada estrategia nace del análisis profundo de tu negocio, tu competencia y tu cliente ideal. Combinamos datos rigurosos con creatividad desbordante para construir presencias digitales que no solo son vistas, sino recordadas y elegidas.
-          </p>
-          <p class="text-body-md text-text-secondary mb-8 leading-relaxed">
-            Somos un equipo apasionado por los resultados reales. Cada proyecto que aceptamos se convierte en una misión: superar tus expectativas con transparencia, innovación y ejecución impecable.
-          </p>
+          <span class="tag-cyber mb-5 inline-flex">{about.aboutTag}</span>
+          <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.aboutHeading, about.aboutHighlight)}></h2>
+          {about.aboutParagraphs.map(p => (
+            <p class="text-body-md text-text-secondary mb-6 leading-relaxed">{p}</p>
+          ))}
           <a href="/contacto" class="btn-cyber-solid magnetic press inline-flex">
-            <span class="icon-wrap">Hablemos de tu proyecto <span class="material-symbols-outlined text-base">arrow_forward</span></span>
+            <span class="icon-wrap">{about.aboutCtaLabel} <span class="material-symbols-outlined text-base">arrow_forward</span></span>
           </a>
         </div>
       </div>
@@ -93,16 +76,14 @@ const team = [
   <section class="mesh-bg py-section-py-sm md:py-section-py-lg">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-14 reveal">
-        <span class="tag-cyber mb-4 inline-flex">Quiénes Somos</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5">
-          Números que <span class="gradient-text">hablan por nosotros</span>
-        </h2>
+        <span class="tag-cyber mb-4 inline-flex">{about.statsTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-5" set:html={highlightHeading(about.statsHeading, about.statsHighlight)}></h2>
         <p class="text-body-md text-text-secondary max-w-2xl mx-auto">
-          Fundada para llenar el vacío entre la tecnología y los resultados, NEXUS nació con una misión clara: hacer que el marketing digital funcione de verdad. Sin humo, sin promesas vacías — solo estrategia, ejecución y métricas que importan.
+          {about.statsParagraph}
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 stagger-fade">
-        {stats.map(s => (
+        {about.stats.map(s => (
           <div class="glass card-cyber rounded-2xl p-8 text-center">
             <p class="font-display font-extrabold text-4xl gradient-text mb-2">{s.value}</p>
             <p class="text-text-secondary text-sm">{s.label}</p>
@@ -116,17 +97,15 @@ const team = [
   <section class="bg-bg-depth py-section-py-sm md:py-section-py-lg">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-14 reveal">
-        <span class="tag-cyber mb-4 inline-flex">El equipo</span>
-        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4">
-          Conoce a nuestros <span class="gradient-text">especialistas</span>
-        </h2>
-        <p class="text-text-secondary text-body-md italic mb-6">"La excelencia no es un acto, es un hábito."</p>
+        <span class="tag-cyber mb-4 inline-flex">{about.teamTag}</span>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-4" set:html={highlightHeading(about.teamHeading, about.teamHighlight)}></h2>
+        <p class="text-text-secondary text-body-md italic mb-6">"{about.teamQuote}"</p>
         <a href="/contacto" class="btn-cyber magnetic press inline-flex">
-          <span class="icon-wrap">Agenda una sesión <span class="material-symbols-outlined text-base">calendar_month</span></span>
+          <span class="icon-wrap">{about.teamCtaLabel} <span class="material-symbols-outlined text-base">calendar_month</span></span>
         </a>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-fade">
-        {team.map(m => (
+        {about.team.map(m => (
           <div class="glass card-cyber rounded-2xl overflow-hidden group">
             <div class="overflow-hidden">
               <img
