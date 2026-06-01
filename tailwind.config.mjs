@@ -1,23 +1,14 @@
+import { colors, fonts } from './src/config/theme.mjs';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors: {
-        'bg-void':   '#03030F',
-        'bg-depth':  '#08082A',
-        'accent':    '#00F0FF',
-        'accent-2':  '#A78BFA',
-        'text-primary':   '#EEF2FF',
-        'text-secondary': '#8892B0',
-        'text-dim':       '#4A5578',
-        'grad-indigo': '#4F46E5',
-        'grad-violet': '#7C3AED',
-        'grad-pink':   '#DB2777',
-      },
+      colors,
       fontFamily: {
-        display: ['Sora', 'sans-serif'],
-        body:    ['Mulish', 'sans-serif'],
+        display: [fonts.display],
+        body:    [fonts.body],
       },
       fontSize: {
         'display-hero':        ['72px', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '800' }],

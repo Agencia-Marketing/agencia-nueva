@@ -1,10 +1,40 @@
 ---
 import '../styles/global.css';
+import { colors, fonts, logo } from '../config/theme.mjs';
 interface Props {
   title: string;
   description?: string;
 }
 const { title, description = 'NEXUS Digital — Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.' } = Astro.props;
+
+// --- Tema → variables CSS que consume global.css (única fuente: src/config/theme.mjs) ---
+const hexToRgb = (hex: string) => {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+};
+const accentRgb = hexToRgb(colors.accent);
+const cssVars: Record<string, string> = {
+  '--bg-void': colors['bg-void'],
+  '--bg-depth': colors['bg-depth'],
+  '--accent': colors.accent,
+  '--accent-2': colors['accent-2'],
+  '--text-primary': colors['text-primary'],
+  '--text-secondary': colors['text-secondary'],
+  '--text-dim': colors['text-dim'],
+  '--grad-indigo': colors['grad-indigo'],
+  '--grad-violet': colors['grad-violet'],
+  '--grad-pink': colors['grad-pink'],
+  '--accent-rgb': accentRgb,
+  '--accent-2-rgb': hexToRgb(colors['accent-2']),
+  '--accent-dim': `rgba(${accentRgb}, 0.08)`,
+  '--accent-glow': `0 0 40px rgba(${accentRgb}, 0.30)`,
+  '--accent-glow-strong': `0 0 80px rgba(${accentRgb}, 0.45)`,
+  '--glass-border-accent': `rgba(${accentRgb}, 0.28)`,
+  '--font-display': fonts.display,
+  '--font-body': fonts.body,
+};
+const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`).join(';') + '}';
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -15,8 +45,9 @@ const { title, description = 'NEXUS Digital — Soluciones digitales de alto ren
   <title>{title}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href={fonts.googleHref} rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <style set:html={rootStyle}></style>
 </head>
 <body class="noise-overlay">
 
@@ -26,9 +57,12 @@ const { title, description = 'NEXUS Digital — Soluciones digitales de alto ren
       <div class="flex items-center justify-between h-20 transition-all duration-300" id="nav-inner">
         <!-- Logo -->
         <a href="/" class="flex items-center gap-2 group">
-          <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
-            <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">bolt</span>
-          </span>
+          {logo.image
+            ? <img src={logo.image} alt={logo.alt} class="w-8 h-8 rounded-lg object-cover" />
+            : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
+                <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span>
+              </span>
+          }
           <span class="font-display font-bold text-lg tracking-tight text-text-primary group-hover:text-accent transition-colors duration-300">NEXUS</span>
         </a>
 
@@ -77,9 +111,12 @@ const { title, description = 'NEXUS Digital — Soluciones digitales de alto ren
         <!-- Brand -->
         <div>
           <a href="/" class="flex items-center gap-2 mb-4">
-            <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
-              <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">bolt</span>
-            </span>
+            {logo.image
+              ? <img src={logo.image} alt={logo.alt} class="w-8 h-8 rounded-lg object-cover" />
+              : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
+                  <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span>
+                </span>
+            }
             <span class="font-display font-bold text-lg text-text-primary">NEXUS</span>
           </a>
           <p class="text-text-secondary text-sm leading-relaxed mb-5">Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.</p>
