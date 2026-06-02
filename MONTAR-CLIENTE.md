@@ -96,7 +96,28 @@ Las imágenes que vienen son demo (Unsplash / pravatar). Para el cliente:
 
 ---
 
-## Paso 4 — Conectar el CMS al repo del cliente
+## Deploy de revisión rápida (pages.dev, sin worker) ⭐
+
+El caso más habitual: el cliente solo va a **revisar**, no a editar todavía. El
+dominio es el temporal que genera Cloudflare Pages (`cliente-x.pages.dev`), sin
+DNS ni dominio propio. **No hace falta el worker OAuth.**
+
+1. Crear repo desde el template y editar marca + contenido **en local**
+   (`npm run dev` + `npm run cms` → `/admin`, con `local_backend: true`).
+2. `git push` → conectar el repo a Cloudflare Pages (build `npm run build`,
+   output `dist`). Se genera `cliente-x.pages.dev`.
+3. Pasarle esa URL al cliente para que revise.
+4. ¿Pide cambios? Editas en local → `git push` → la `pages.dev` se actualiza
+   sola; el cliente solo refresca.
+
+En este flujo **no toques `base_url`** en `config.yml` (el `/admin` en
+producción no se usa aún). El worker, la OAuth App y el dominio propio se
+configuran **solo cuando el cliente aprueba y quiere editar él mismo** (pasos 4
+y 5 siguientes).
+
+---
+
+## Paso 4 — Conectar el CMS al repo del cliente (edición en producción)
 
 En `public/admin/config.yml`:
 ```yaml
