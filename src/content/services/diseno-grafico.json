@@ -2,21 +2,21 @@
   "title": "Diseño Gráfico",
   "order": 3,
   "icon": "palette",
-  "heroHeading": "Identidades visuales que enamoran y convierten",
-  "heroHighlight": "enamoran",
-  "heroSub": "Creamos sistemas visuales premium que comunican el alma de tu marca y generan reconocimiento inmediato en cualquier punto de contacto.",
+  "heroHeading": "Diseñamos lo inimaginable para tu marca",
+  "heroHighlight": "inimaginable",
+  "heroSub": "Desde una pieza individual hasta el diseño completo de tu marca. Trabajamos con un brief detallado y rondas de revisión. Precios en USD por proyecto.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
-  "imageAlt": "Diseño Gráfico NEXUS",
+  "imageAlt": "Diseño Gráfico VEXIAMAX",
   "features": [
-    { "icon": "brand_awareness", "title": "Identidad de marca", "desc": "Logotipo, paleta, tipografías y sistema visual coherente que comunica autoridad desde el primer vistazo." },
-    { "icon": "image", "title": "Materiales digitales", "desc": "Posts, stories, banners, presentaciones y todo el ecosistema visual que tu marca necesita en digital." },
-    { "icon": "print", "title": "Diseño impreso", "desc": "Tarjetas, folletos, catálogos y señalética con la misma calidad premium de tu identidad digital." }
+    { "icon": "brand_awareness", "title": "Identidad de marca", "desc": "3 propuestas de logotipo, manual de identidad, tipografías y logo en formatos editable, JPG y PNG." },
+    { "icon": "image", "title": "Piezas digitales", "desc": "Flyers, carteles, posts, infografías, covers y headers listos para web y redes en pocos días." },
+    { "icon": "print", "title": "Gran formato y especiales", "desc": "Naming, menús digitales, lonas, stickers, rótulos y packaging con calidad profesional." }
   ],
   "plans": [
-    { "name": "Brand Kit", "sub": "Identidad básica", "price": "$3.5k–$6k", "featured": false, "features": ["Logo + variantes", "Paleta de colores", "Tipografías", "Manual de marca", "Formatos web y print"] },
-    { "name": "Brand Pro", "sub": "Sistema completo", "price": "$7k–$12k", "featured": true, "features": ["Todo de Brand Kit", "20 piezas digitales", "Templates editables", "Guía de voz y tono", "Revisiones ilimitadas"] },
-    { "name": "Brand Full", "sub": "Ecosistema total", "price": "$14k–$22k", "featured": false, "features": ["Todo de Brand Pro", "Pack de redes 3 meses", "Diseño web aplicado", "Video intro/logo", "Soporte mensual"] }
+    { "name": "Pieza Individual", "sub": "Flyer, cartel, post…", "price": "Desde $20", "featured": false, "features": ["Flyer: $50", "Tarjeta de presentación: $30", "Cartel: $30 · Infografía: $20", "Cover / header: $50", "Entrega 2–5 días hábiles"] },
+    { "name": "Diseño de Marca", "sub": "Logo + manual", "price": "$250", "featured": true, "features": ["3 propuestas de logotipo", "1 ronda de cambios incluida", "Manual de identidad", "Logo editable + JPG + PNG + tipografías", "Etapa 1: 5–7 días · Etapa 2: 3 días", "Extra: propuesta $75 · ronda $40"] },
+    { "name": "Branding & Especiales", "sub": "Naming, menús, gran formato", "price": "Desde $70", "featured": false, "features": ["Naming: $150", "Menú digital empresarial: $180", "Lona 1×1 m: $150", "5 stickers: $70", "Packaging y rótulos (según dificultad)"] }
   ],
   "ctaHeading": "¿Tu marca merece mejor imagen?",
   "ctaText": "Cuéntanos tu visión y te mostramos cómo transformarla en un sistema visual que impacte.",

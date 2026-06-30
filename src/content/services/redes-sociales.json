@@ -4,22 +4,24 @@
   "icon": "diversity_3",
   "heroHeading": "Redes sociales que venden y fidelizan tu comunidad",
   "heroHighlight": "venden",
-  "heroSub": "Convertimos tu presencia en redes en un motor de ventas y fidelización con estrategia, contenido de calidad y gestión experta.",
+  "heroSub": "Administramos tus redes con community manager, trafficker y diseñador gráfico. 15 diseños por red social al mes (hasta 6 videos). Precios en USD; ahorra 2 meses pagando anual.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
-  "imageAlt": "Gestión de Redes Sociales NEXUS",
+  "imageAlt": "Gestión de Redes Sociales VEXIAMAX",
   "features": [
-    { "icon": "calendar_month", "title": "Planificación editorial", "desc": "Estrategia de contenido mensual alineada con tus objetivos de negocio y el calendario de tu industria." },
-    { "icon": "bar_chart", "title": "Análisis y reportes", "desc": "Métricas semanales y mensuales con insights accionables para mejorar continuamente el rendimiento." },
-    { "icon": "forum", "title": "Community management", "desc": "Gestión activa de comentarios, mensajes y conversaciones para construir una comunidad fiel a tu marca." }
+    { "icon": "groups", "title": "Community manager", "desc": "Realiza la parrilla de contenidos, copies, diseños, publicaciones y responde mensajes y comentarios de 9:00 a 17:00 (GMT-6, CDMX)." },
+    { "icon": "ads_click", "title": "Trafficker", "desc": "Experto en pauta publicitaria: prepara 2 propuestas de campaña y entrega un reporte mensual de crecimiento." },
+    { "icon": "palette", "title": "Diseñador gráfico", "desc": "Proyecta la línea gráfica de tu negocio con diseños y videos impactantes, programados y publicados por nosotros." }
   ],
   "plans": [
-    { "name": "Básico", "sub": "2 redes sociales", "price": "$1.8k/mes", "featured": false, "features": ["12 posts/mes", "2 redes incluidas", "Diseño de piezas", "Reporte mensual", "Respuesta de comentarios"] },
-    { "name": "Growth", "sub": "4 redes sociales", "price": "$3.2k/mes", "featured": true, "features": ["24 posts/mes", "4 redes incluidas", "Stories diarias", "Reels/TikToks (4/mes)", "Community 5d/sem", "Reporte semanal"] },
-    { "name": "Premium", "sub": "Ecosistema total", "price": "$5.5k/mes", "featured": false, "features": ["Posts ilimitados", "Todas las redes", "Reels diarios", "Stories diarias", "Community 7d/sem", "Estrategia mensual", "Ads incluidos"] }
+    { "name": "Esencial", "sub": "1 red social", "price": "$200/mes", "featured": false, "features": ["15 diseños/mes (hasta 6 videos)", "Community manager 9–17h", "Trafficker (2 propuestas)", "Diseñador gráfico", "Reporte mensual", "Anual: $2,000 (ahorra 2 meses)"] },
+    { "name": "Indispensable", "sub": "2 redes sociales", "price": "$220/mes", "featured": false, "features": ["30 diseños/mes", "Community manager 9–17h", "Trafficker (2 propuestas)", "Diseñador gráfico", "Reporte mensual", "Anual: $2,200 (ahorra 2 meses)"] },
+    { "name": "Todo en uno", "sub": "3 redes sociales", "price": "$250/mes", "featured": true, "features": ["45 diseños/mes", "Community manager 9–17h", "Trafficker (2 propuestas)", "Diseñador gráfico", "Reporte mensual", "Anual: $2,500 (ahorra 2 meses)"] },
+    { "name": "Profesional", "sub": "4 redes sociales", "price": "$280/mes", "featured": false, "features": ["60 diseños/mes", "Community manager 9–17h", "Trafficker (2 propuestas)", "Diseñador gráfico", "Reporte mensual", "Anual: $2,800 (ahorra 2 meses)"] },
+    { "name": "Omnipresente", "sub": "6 redes sociales", "price": "$310/mes", "featured": false, "features": ["90 diseños/mes", "Community manager 9–17h", "Trafficker (2 propuestas)", "Diseñador gráfico", "Reporte mensual", "Anual: $3,100 (ahorra 2 meses)"] }
   ],
   "ctaHeading": "¿Tus redes necesitan más impacto?",
-  "ctaText": "Diseñamos una estrategia personalizada para convertir tu comunidad en clientes reales.",
+  "ctaText": "Diseñamos una estrategia personalizada para convertir tu comunidad en clientes reales. Estos planes se trabajan bajo la plataforma Canva.",
   "ctaButtonLabel": "Solicitar estrategia gratuita",
   "ctaButtonIcon": "phone_in_talk"
 }

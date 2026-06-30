@@ -2,21 +2,21 @@
   "title": "Creación de Contenido",
   "order": 9,
   "icon": "history_edu",
-  "heroHeading": "Contenido estratégico que atrae, educa y convierte tu audiencia",
+  "heroHeading": "Contenido que atrae, educa y convierte a tu audiencia",
   "heroHighlight": "atrae, educa",
-  "heroSub": "Creamos el contenido que posiciona tu marca como referente, atrae tráfico cualificado y nutre a tus leads hasta la conversión.",
+  "heroSub": "Nuestro paquete creador de contenidos: videos, reels, TikToks, creación de imagen y animación de logotipo, pieza por pieza. Precios en USD según el tipo de contenido.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
-  "imageAlt": "Creación de Contenido NEXUS",
+  "imageAlt": "Creación de Contenido VEXIAMAX",
   "features": [
-    { "icon": "edit_note", "title": "Copywriting estratégico", "desc": "Textos optimizados para SEO y conversión que posicionan tu marca como referente en tu industria." },
-    { "icon": "search", "title": "SEO y posicionamiento", "desc": "Investigación de keywords, optimización técnica y estrategia de contenido para dominar los buscadores." },
-    { "icon": "schedule", "title": "Publicación consistente", "desc": "Calendario editorial mensual con publicación automatizada para mantener una presencia constante." }
+    { "icon": "imagesmode", "title": "Creación de imagen", "desc": "Piezas gráficas para tus redes y campañas, listas en pocos días hábiles." },
+    { "icon": "animation", "title": "Animación de logotipo", "desc": "Dale vida a tu marca con animaciones de logotipo en versión básica, inter o completa." },
+    { "icon": "movie_edit", "title": "Videos, reels y TikToks", "desc": "Contenido en video para todas tus redes, con niveles de edición según tu objetivo." }
   ],
   "plans": [
-    { "name": "Content Basic", "sub": "8 piezas/mes", "price": "$2k/mes", "featured": false, "features": ["8 artículos de blog", "Investigación SEO", "Imágenes optimizadas", "Publicación incluida", "Reporte mensual"] },
-    { "name": "Content Pro", "sub": "20 piezas/mes", "price": "$4.5k/mes", "featured": true, "features": ["20 artículos blog", "Newsletter mensual", "Scripts para redes", "Casos de estudio (1/mes)", "Estrategia trimestral", "Revisiones ilimitadas"] },
-    { "name": "Content Agency", "sub": "Ecosistema total", "price": "$8k+/mes", "featured": false, "features": ["Contenido ilimitado", "Equipo dedicado", "Podcast (guiones)", "Whitepapers e-books", "Link building", "Reporting avanzado"] }
+    { "name": "Contenido Básico", "sub": "Imagen + animación", "price": "Desde $30", "featured": false, "features": ["Creación de imagen: $30", "Animación de logotipo básica: $30", "Reels / TikTok", "Entrega 2–3 días hábiles"] },
+    { "name": "Contenido Pro", "sub": "Video + branding", "price": "Desde $90", "featured": true, "features": ["Video Básico: $90", "Animación de logotipo inter: $50", "Reels y TikToks", "Entrega 2–5 días hábiles"] },
+    { "name": "Contenido Premium", "sub": "Video de alto nivel", "price": "Desde $130", "featured": false, "features": ["Video Inter: $130", "Video Completo: $200", "Animación de logotipo completa: $80", "Entrega 3–10 días hábiles"] }
   ],
   "ctaHeading": "¿Tu contenido está generando resultados reales?",
   "ctaText": "Auditamos tu contenido actual y diseñamos una estrategia que multiplique tu tráfico y conversiones.",

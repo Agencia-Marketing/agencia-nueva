@@ -5,7 +5,7 @@
   "heroHighlight": "triplica",
   "heroSub": "El contenido generado por personas reales genera 3x más conversiones. Conectamos tu marca con los creadores perfectos para tu audiencia.",
   "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
-  "imageAlt": "Creadores UGC NEXUS",
+  "imageAlt": "Creadores UGC VEXIAMAX",
   "features": [
     { "icon": "verified_user", "title": "Confianza Auténtica", "desc": "El 94% de los consumidores confía más en UGC que en publicidad tradicional. Dale a tu marca esa credibilidad." },
     { "icon": "bar_chart", "title": "CTR Aumentado", "desc": "El contenido UGC genera hasta 3x más clics en anuncios pagados que el contenido de marca tradicional." },
@@ -18,16 +18,16 @@
   "plan": {
     "badge": "Más Popular",
     "name": "Plan UGC",
-    "priceLabel": "Precio desde",
-    "price": "$3k",
-    "note": "Por vídeo creado y entregado",
+    "priceLabel": "Precio por video",
+    "price": "$250",
+    "note": "Guión: 3 días hábiles · Video: 5–7 días hábiles. Precios en USD.",
     "features": [
-      "Selección de creador ideal",
+      "Video publicitario con persona real",
+      "Selección del creador ideal",
       "Guión y brief de contenido",
-      "1 vídeo UGC editado (30-60s)",
+      "1 video UGC editado (30–60 s)",
       "Derechos de uso publicitario",
-      "Variantes para A/B testing",
-      "Estrategia de distribución"
+      "Variantes para A/B testing"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },

@@ -1,5 +1,5 @@
 {
-  "brand": "NEXUS",
+  "brand": "VEXIAMAX",
   "ctaLabel": "Contáctanos",
   "nav": [
     { "label": "Inicio", "href": "/" },
@@ -8,11 +8,12 @@
     { "label": "Contacto", "href": "/contacto" }
   ],
   "contact": {
-    "phone": "+34 639 494 000",
-    "email": "hola@nexusdigital.io",
-    "location": "Madrid, España"
+    "phone": "+52 000 000 0000",
+    "email": "contacto@vexiamax.com",
+    "location": "Ciudad de México, México",
+    "hours": "Lun a Vie · 08:00–17:00 (GMT-6, CDMX)"
   },
-  "footerTagline": "Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.",
+  "footerTagline": "Agencia de IA y Marketing Solutions: automatización, campañas y desarrollo digital para escalar tu negocio.",
   "footerPages": [
     { "label": "Inicio", "href": "/" },
     { "label": "Nosotros", "href": "/nosotros" },
@@ -29,5 +30,5 @@
     { "label": "Términos", "href": "#" },
     { "label": "Soporte", "href": "#" }
   ],
-  "copyright": "© 2026 NEXUS Digital | Todos los derechos reservados."
+  "copyright": "© 2026 VEXIAMAX | IA & Marketing Solutions · Todos los derechos reservados."
 }

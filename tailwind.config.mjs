@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         display: [fonts.display],
         body:    [fonts.body],
+        brand:   [fonts.brand],
       },
       fontSize: {
         'display-hero':        ['72px', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '800' }],

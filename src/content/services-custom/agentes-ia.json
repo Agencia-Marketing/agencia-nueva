@@ -1,20 +1,20 @@
 {
   "title": "Agentes de IA",
   "heroTagIcon": "smart_toy",
-  "heroHeading": "Escala sin límites con inteligencia artificial autónoma",
-  "heroHighlight": "inteligencia artificial",
-  "heroSub": "Escala tu operación sin escalar tu equipo: agentes de IA que cualifican, venden y atienden de forma autónoma 24/7.",
+  "heroHeading": "El poder de la IA en tus manos, 24/7",
+  "heroHighlight": "el poder de la IA",
+  "heroSub": "Agentes de IA que cualifican, venden y atienden de forma autónoma las 24 horas. Requiere una cuenta de HighLevel (highlead.us) o GHL (gohighlevel.com); el pago de la plataforma no está incluido.",
   "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
-  "imageAlt": "Agentes de IA NEXUS",
+  "imageAlt": "Agentes de IA VEXIAMAX",
   "features": [
     { "icon": "schedule", "title": "Disponibilidad 24/7", "desc": "Tu agente de IA nunca duerme — atiende consultas, cualifica leads y cierra citas a cualquier hora." },
-    { "icon": "hub", "title": "Cualificación Masiva", "desc": "Evalúa miles de prospectos simultáneamente con criterios personalizados para tu negocio." },
-    { "icon": "integration_instructions", "title": "Integración CRM", "desc": "Conecta directamente con GoHighLevel, HubSpot o tu CRM actual sin fricciones técnicas." }
+    { "icon": "chat", "title": "WhatsApp API incluida", "desc": "La API de WhatsApp viene incluida en el precio, con $10 USD de consumo de IA para tus primeros 700–800 mensajes." },
+    { "icon": "integration_instructions", "title": "Plataforma + soporte", "desc": "Configuración gratuita por un ejecutivo, plataforma donde se instala tu agente y soporte técnico mes a mes." }
   ],
   "comparisonHeading": "Empleado tradicional vs Agente de IA",
   "comparisonHighlight": "vs",
   "compareLeftTitle": "Empleado Tradicional",
-  "compareRightTitle": "Agente de IA NEXUS",
+  "compareRightTitle": "Agente de IA VEXIAMAX",
   "comparisonLeft": [
     "Horario fijo de 8 horas",
     "Atiende 1 cliente a la vez",
@@ -26,20 +26,21 @@
     "Activo 24/7 los 365 días",
     "Atiende miles simultáneamente",
     "Sin interrupciones",
-    "Inversión única de implantación",
+    "Configuración única + mensualidad baja",
     "Aprendizaje autónomo continuo"
   ],
   "plan": {
-    "badge": "Plan Único",
-    "price": "$15k",
-    "note": "Implementación completa",
+    "badge": "Agente 24/7",
+    "price": "$500",
+    "note": "Configuración (pago único) · luego $200/mes. Precios en USD.",
     "features": [
-      "Configuración y entrenamiento del agente",
-      "Integración con tu CRM",
-      "Conexión con bases de datos",
-      "Cualificación automática de leads",
-      "Panel de control y reportes",
-      "Soporte técnico 3 meses"
+      "Configuración del agente por un ejecutivo (gratis)",
+      "Plataforma donde se instala tu agente",
+      "WhatsApp API incluida",
+      "$10 de consumo de IA (700–800 mensajes)",
+      "Soporte técnico mes a mes",
+      "Mensualidad: $200",
+      "Requiere cuenta HighLevel o GHL (no incluida)"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },

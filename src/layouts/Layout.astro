@@ -3,12 +3,12 @@ import '../styles/global.css';
 import { colors, fonts, logo } from '../config/theme.mjs';
 import site from '../content/settings/site.json';
 const { brand, ctaLabel, nav, contact, footerTagline, footerPages, footerLinks, footerBottomLinks, copyright } = site;
-const contactIcons: Record<string, string> = { phone: 'call', email: 'mail', location: 'location_on' };
+const contactIcons: Record<string, string> = { phone: 'call', email: 'mail', location: 'location_on', hours: 'schedule' };
 interface Props {
   title: string;
   description?: string;
 }
-const { title, description = 'NEXUS Digital — Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.' } = Astro.props;
+const { title, description = 'VEXIAMAX — Agencia de IA y Marketing Solutions. Automatización, campañas y desarrollo digital para escalar tu negocio.' } = Astro.props;
 
 // --- Tema → variables CSS que consume global.css (única fuente: src/config/theme.mjs) ---
 const hexToRgb = (hex: string) => {
@@ -36,6 +36,7 @@ const cssVars: Record<string, string> = {
   '--glass-border-accent': `rgba(${accentRgb}, 0.28)`,
   '--font-display': fonts.display,
   '--font-body': fonts.body,
+  '--font-brand': fonts.brand,
 };
 const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`).join(';') + '}';
 ---
@@ -46,6 +47,7 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title}</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href={fonts.googleHref} rel="stylesheet" />
@@ -61,12 +63,14 @@ const rootStyle = ':root{' + Object.entries(cssVars).map(([k, v]) => `${k}:${v}`
         <!-- Logo -->
         <a href="/" class="flex items-center gap-2 group">
           {logo.image
-            ? <img src={logo.image} alt={logo.alt} class="w-8 h-8 rounded-lg object-cover" />
-            : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
-                <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span>
-              </span>
+            ? <img src={logo.image} alt={logo.alt} class="h-9 w-auto" />
+            : <>
+                <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center">
+                  <span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span>
+                </span>
+                <span class="font-brand font-bold text-lg tracking-tight text-text-primary group-hover:text-accent transition-colors duration-300">{brand}</span>
+              </>
           }
-          <span class="font-display font-bold text-lg tracking-tight text-text-primary group-hover:text-accent transition-colors duration-300">NEXUS</span>
         </a>
 
         <!-- Desktop Nav -->

@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 /* ============================================================
-   NEXUS DIGITAL — CYBER-LUXE GLASSMORPHISM DESIGN SYSTEM
+   VEXIAMAX — IA & MARKETING SOLUTIONS · CYBER-LUXE DESIGN SYSTEM
    ============================================================ */
+
+/* Tipografía corporativa Robexs (auto-hospedada). Montserrat viene de
+   Google Fonts (ver fonts.googleHref en theme.mjs). Robexs se usa solo en
+   el logo y los titulares hero vía la clase Tailwind `font-brand`. */
+@font-face {
+  font-family: 'Robexs';
+  src: url('/fonts/Robexs.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Las variables de marca (--bg-void, --accent y derivados, --grad-*, --text-*,
    --font-*) se inyectan desde src/config/theme.mjs vía Layout.astro.

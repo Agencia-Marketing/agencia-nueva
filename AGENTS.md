@@ -1,15 +1,15 @@
-# AGENTS — Plantilla 3 | Cyber-Luxe Glassmorphism Agency
+# AGENTS — VEXIAMAX | IA & Marketing Solutions (Cyber-Luxe Glassmorphism)
 
 ## Project Overview
 
-Cyber-Luxe Glassmorphism landing page template for a digital marketing agency. Built with Astro 5 + Tailwind CSS v3, deployable to Cloudflare Pages. Includes standalone HTML version for quick delivery. Visual evolution of Plantilla 1 & 2 — same content, dark void aesthetic with glass surfaces.
+Cyber-Luxe Glassmorphism landing page for **VEXIAMAX — IA & Marketing Solutions**, an AI & digital marketing agency. Built with Astro 5 + Tailwind CSS v3, deployable to Cloudflare Pages. Dark blue/violet aesthetic with glass surfaces. Brand lives in a single file (`src/config/theme.mjs`); content in `src/content/**` JSON (editable via `/admin`).
 
 ## Critical Conventions
 
 - **Two variants coexist**: `src/` (Astro with local Tailwind + PostCSS) and `html/` (standalone HTML with Tailwind CDN + inline CSS). Keep both in sync when making visual/style changes.
 - **All brand colors**: defined as CSS custom properties in `:root` in `src/styles/global.css` and each HTML file's `<style>` block. Also mirrored in `tailwind.config.mjs`.
 - **Tailwind is v3**, not v4. Use `@tailwind base/components/utilities` directives.
-- **Fonts**: Sora (display/headings, weights 600/700/800) + Mulish (body, weights 400/500/600). Never substitute with Inter, Roboto, or Arial.
+- **Fonts**: Montserrat (display/headings + body, weights 400–800, from Google Fonts) + Robexs (corporate, self-hosted at `public/fonts/Robexs.ttf` via `@font-face`). Robexs is used ONLY on the logo wordmark and hero `h1`s (Tailwind class `font-brand`); everything else is Montserrat. Never substitute with Inter, Roboto, or Arial.
 - **Backdrop-filter**: Always pair `backdrop-filter` with `-webkit-backdrop-filter` for Safari compatibility.
 
 ## Commands
@@ -22,20 +22,21 @@ Cyber-Luxe Glassmorphism landing page template for a digital marketing agency. B
 
 ## Design System
 
-### Colors — `:root`
-- `--bg-void: #03030F` — void-black base background
-- `--bg-depth: #08082A` — deep section background
-- `--grad-indigo: #4F46E5` — mesh gradient indigo
-- `--grad-violet: #7C3AED` — mesh gradient violet
-- `--grad-pink: #DB2777` — mesh gradient pink
-- `--accent: #00F0FF` — cyan electric (primary interactive)
-- `--accent-rgb: 0, 240, 255` — RGB triplet for rgba() use
-- `--accent-dim: rgba(0,240,255,0.08)` — subtle accent background tint
-- `--accent-glow: 0 0 40px rgba(0,240,255,0.30)` — glow shadow for buttons
-- `--accent-2: #A78BFA` — soft violet secondary accent
-- `--text-primary: #EEF2FF` — near-white blue-tinted
-- `--text-secondary: #8892B0` — muted blue-gray
-- `--text-dim: #4A5578` — disabled / hint text
+### Colors — `:root` (paleta VEXIAMAX, Manual de identidad 5.1)
+- `--bg-void: #03061A` — navy-black base background
+- `--bg-depth: #081046` — deep section background
+- `--grad-indigo: #0A2A88` — mesh gradient deep blue (Pantone 287C)
+- `--grad-violet: #3F0DA0` — mesh gradient violet (Pantone 2091C)
+- `--grad-pink: #1E6BFF` — mesh gradient (no pink in brand → bright blue)
+- `--accent: #1E6BFF` — bright blue (Pantone 2727C, primary interactive)
+- `--accent-rgb: 30, 107, 255` — RGB triplet for rgba() use
+- `--accent-dim: rgba(30,107,255,0.08)` — subtle accent background tint
+- `--accent-glow: 0 0 40px rgba(30,107,255,0.30)` — glow shadow for buttons
+- `--accent-2: #8B5CF6` — soft violet secondary accent
+- `--text-primary: #EAF0FF` — near-white blue-tinted
+- `--text-secondary: #8A97C2` — muted blue-gray
+- `--text-dim: #455080` — disabled / hint text
+- Green `#30870B` (Pantone 2424C) is a complementary/success color available but NOT wired into the main UI.
 - `--glass-bg: rgba(255,255,255,0.032)` — glass card base fill
 - `--glass-bg-hover: rgba(255,255,255,0.065)` — glass fill on hover
 - `--glass-border: rgba(255,255,255,0.075)` — default glass border
@@ -44,8 +45,8 @@ Cyber-Luxe Glassmorphism landing page template for a digital marketing agency. B
 - `--shadow-glass: 0 8px 32px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.05)` — glass shadow
 
 ### Typography
-- **Display/Headings**: Sora (700/800 weight, -0.02em letter-spacing)
-- **Body**: Mulish (400/500/600 weight, 1.65 line-height)
+- **Display/Headings + Body**: Montserrat (400–800 weight; headings -0.02em letter-spacing, body 1.65 line-height)
+- **Brand (`font-brand`)**: Robexs — logo wordmark + hero `h1`s only
 
 ### Rebranding flow
 Change colors in TWO places:

@@ -1,30 +1,30 @@
 {
   "title": "Embudos de Venta",
   "heroTagIcon": "filter_alt",
-  "heroHeading": "Sistemas de conversión que trabajan solos mientras tú descansas",
-  "heroHighlight": "trabajan solos",
-  "heroSub": "Diseña el viaje perfecto de tu cliente: desde el primer contacto hasta la venta, todo automatizado y optimizado para convertir.",
+  "heroHeading": "Embudos de venta con filtro API de Facebook",
+  "heroHighlight": "filtro API de Facebook",
+  "heroSub": "Diseñamos, automatizamos y dejamos funcionando tu embudo: landing, calendario de citas, emails y formulario con API de Facebook. Pago único; no incluye la plataforma HighLevel.",
   "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80",
-  "imageAlt": "Embudos de Venta NEXUS",
+  "imageAlt": "Embudos de Venta VEXIAMAX",
   "features": [
-    { "icon": "web", "title": "Landing Diseñada", "desc": "Página de aterrizaje de alta conversión con copywriting persuasivo y diseño orientado a la acción." },
-    { "icon": "automation", "title": "Automatización Completa", "desc": "Secuencias de email, WhatsApp y SMS que nutren al prospecto automáticamente hasta la compra." },
-    { "icon": "calendar_month", "title": "Seguimiento Inteligente", "desc": "Calendario integrado, recordatorios automáticos y pipeline de ventas en tiempo real." }
+    { "icon": "web", "title": "Landing diseñada", "desc": "Página de aterrizaje de alta conversión con copywriting persuasivo y diseño orientado a la acción." },
+    { "icon": "automation", "title": "Automatización completa", "desc": "Configuración y automatización del embudo, calendario de citas y 3 emails para la entrega de clientes." },
+    { "icon": "hub", "title": "Filtro API de Facebook", "desc": "Diseño de formulario y configuración de la API de Facebook, con especialista que lanza la campaña." }
   ],
   "plan": {
-    "badge": "Más Popular",
-    "name": "Plan Único",
-    "price": "$3.9k",
-    "note": "Implementación completa del sistema",
+    "badge": "Pago único",
+    "name": "Embudo con filtro API",
+    "price": "$300",
+    "note": "Pago único de configuración. Precios en USD.",
     "features": [
-      "Diseño landing page de alta conversión",
-      "Configuración GoHighLevel completa",
-      "Integración calendario de citas",
-      "Secuencias de email automatizadas",
-      "Integración formularios y CRM",
-      "Integración Meta Ads y Google Ads",
-      "Dashboard de métricas en tiempo real",
-      "Soporte técnico 60 días"
+      "Diseño de landing page",
+      "Configuración y automatización del embudo",
+      "Calendario de citas",
+      "Diseño de 3 emails de entrega de clientes",
+      "Formulario + configuración API de Facebook",
+      "Especialista en campañas (no incluye la inversión)",
+      "Entrega: 7–10 días hábiles",
+      "No incluye la plataforma HighLevel"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },
