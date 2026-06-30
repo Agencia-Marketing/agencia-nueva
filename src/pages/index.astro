@@ -16,7 +16,7 @@ export const prerender = true;
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <span class="tag-cyber mb-6 inline-flex"><span class="material-symbols-outlined text-sm">bolt</span>{home.heroTag}</span>
-          <h1 class="font-brand text-display-hero-mobile md:text-display-hero mb-6" set:html={highlightHeading(home.heroHeading, home.heroHighlight)}></h1>
+          <h1 class="font-display text-display-hero-mobile md:text-display-hero mb-6" set:html={highlightHeading(home.heroHeading, home.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary mb-8 max-w-xl">
             {home.heroParagraph}
           </p>

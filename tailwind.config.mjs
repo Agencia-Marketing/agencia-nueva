@@ -12,8 +12,8 @@ export default {
         brand:   [fonts.brand],
       },
       fontSize: {
-        'display-hero':        ['72px', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '800' }],
-        'display-hero-mobile': ['38px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'display-hero':        ['54px', { lineHeight: '1.1',  letterSpacing: '-0.02em', fontWeight: '800' }],
+        'display-hero-mobile': ['32px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '800' }],
         'headline-lg':         ['48px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
         'headline-lg-mobile':  ['30px', { lineHeight: '1.2',  letterSpacing: '-0.01em', fontWeight: '700' }],
         'headline-md':         ['24px', { lineHeight: '1.35', fontWeight: '600' }],

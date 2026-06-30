@@ -17,7 +17,7 @@ const { phone, email } = site.contact;
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <span class="tag-cyber mb-5 inline-flex"><span class="material-symbols-outlined text-sm">mail</span>{contact.heroTag}</span>
-          <h1 class="font-brand text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
+          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(contact.heroHeading, contact.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary">
             {contact.heroParagraph}
           </p>

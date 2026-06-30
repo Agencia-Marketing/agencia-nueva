@@ -9,7 +9,7 @@ Cyber-Luxe Glassmorphism landing page for **VEXIAMAX — IA & Marketing Solution
 - **Two variants coexist**: `src/` (Astro with local Tailwind + PostCSS) and `html/` (standalone HTML with Tailwind CDN + inline CSS). Keep both in sync when making visual/style changes.
 - **All brand colors**: defined as CSS custom properties in `:root` in `src/styles/global.css` and each HTML file's `<style>` block. Also mirrored in `tailwind.config.mjs`.
 - **Tailwind is v3**, not v4. Use `@tailwind base/components/utilities` directives.
-- **Fonts**: Montserrat (display/headings + body, weights 400–800, from Google Fonts) + Robexs (corporate, self-hosted at `public/fonts/Robexs.ttf` via `@font-face`). Robexs is used ONLY on the logo wordmark and hero `h1`s (Tailwind class `font-brand`); everything else is Montserrat. Never substitute with Inter, Roboto, or Arial.
+- **Fonts**: Montserrat (display/headings + body + hero, weights 400–800, from Google Fonts) + Robexs (corporate, self-hosted at `public/fonts/Robexs.ttf` via `@font-face`). Robexs (Tailwind class `font-brand`) is reserved for the text logo wordmark fallback only; everything visible (including hero `h1`s) is Montserrat. Never substitute with Inter, Roboto, or Arial.
 - **Backdrop-filter**: Always pair `backdrop-filter` with `-webkit-backdrop-filter` for Safari compatibility.
 
 ## Commands
@@ -46,7 +46,7 @@ Cyber-Luxe Glassmorphism landing page for **VEXIAMAX — IA & Marketing Solution
 
 ### Typography
 - **Display/Headings + Body**: Montserrat (400–800 weight; headings -0.02em letter-spacing, body 1.65 line-height)
-- **Brand (`font-brand`)**: Robexs — logo wordmark + hero `h1`s only
+- **Brand (`font-brand`)**: Robexs — text logo wordmark fallback only
 
 ### Rebranding flow
 Change colors in TWO places:

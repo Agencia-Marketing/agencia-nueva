@@ -12,7 +12,7 @@ export const prerender = true;
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <span class="tag-cyber mb-5 inline-flex"><span class="material-symbols-outlined text-sm">{s.heroTagIcon}</span>{s.title}</span>
-          <h1 class="font-brand text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(s.heroHeading, s.heroHighlight)}></h1>
+          <h1 class="font-display text-display-hero-mobile md:text-5xl font-extrabold mb-5" set:html={highlightHeading(s.heroHeading, s.heroHighlight)}></h1>
           <p class="text-body-lg text-text-secondary mb-8">{s.heroSub}</p>
           <div class="flex gap-4 flex-wrap">
             <a href="/contacto" class="btn-cyber-solid magnetic press">Solicitar servicio</a>
